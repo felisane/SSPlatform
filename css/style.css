@@ -462,14 +462,14 @@ footer {
         font-size: 140%;
     }
     .hero {
-        width: 350px;
+        width: 340px;
     }
     .hero p {
         font-size: 90%;
     }
     
     .row {
-        max-width: 350px;
+        max-width: 340px;
     }
 
      .logo-div img{
@@ -485,5 +485,5 @@ footer {
     }
 
     .form-container{
-        width: 98%;
+        width: 95%;
     }
