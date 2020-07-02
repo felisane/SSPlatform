@@ -469,7 +469,7 @@ footer {
     }
     
     .row {
-        max-width: 400px;
+        max-width: 380px;
     }
 
      .logo-div img{
@@ -481,5 +481,9 @@ footer {
     }
 
     .waves-do-header {
-    width:300%;
+        width:300%;
+    }
+    
+    .form-container{
+        width: 100%;
     }
