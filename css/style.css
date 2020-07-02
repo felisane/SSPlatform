@@ -458,22 +458,22 @@ footer {
 /*-------------------------------------------------*/
 
 @media only screen and (max-width: 767px) {
-     h1{
+        h1{
         font-size: 140%;
     }
     .hero {
-        width: 350px;
+        width: 400px;
     }
     .hero p {
         font-size: 90%;
     }
     
     .row {
-        max-width: 380px;
+        max-width: 70%;
     }
 
      .logo-div img{
-        width: 180%;
+        width: 210%;
     }
 
     .main-header {
@@ -481,9 +481,9 @@ footer {
     }
 
     .waves-do-header {
-        width:300%;
+    width:300%;
     }
-    
+
     .form-container{
-        width: 350px;
+        width: 90%;
     }
