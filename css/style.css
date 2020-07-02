@@ -1,0 +1,485 @@
+/* CONFIGURAÇÕES BÁSICAS */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    max-width: 100%;
+    background-color: white;
+    color: white;
+    font-family: 'lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------- */
+/* COMPONENTES ÚTEIS */
+/* ----------------------------------------------- */
+
+
+.row {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.center {
+    margin-top: 10em;
+    position: relative;
+}
+section {
+    padding: 80px 0;
+}
+button {
+    cursor: pointer;
+}
+
+/*------------------- Main navi--------------- */
+
+.logo-div {
+    width: 10%;
+    float: left;
+}
+
+.logo-div img {
+    width: 60%;
+}
+nav {
+    color: black;
+    width: 100%;
+    background: white;
+    height: 60px;
+    padding-top: .6em;
+    border-bottom: 1px solid rgba(255,255,255,.9);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+.nav-direita {
+    display: flex;
+    justify-content: center;
+    border: 0px solid white;
+    float: right;
+    position: relative;
+}
+
+.main-nav {
+    list-style: none;
+    float: right;
+    display: inline;
+    padding-top: .2em;
+    border: 0px solid black;
+    color: black;
+} 
+
+.main-nav li {
+    font-size: 80%;
+    display: inline-block;
+    margin-left: 32px;
+    font-weight: bold;
+}
+
+.mobile-nav{
+    display: none;
+    font-size: 160%;
+    float: right;
+    cursor: pointer;
+}
+
+/*--------------LINKS---------------*/
+a{
+    text-decoration: none;
+}
+
+.main-nav a:link,
+.main-nav a:visited{
+    color: black;
+    transition: .1s color;
+}
+
+.main-nav a:hover,
+.main-nav a:active{
+    color:  #0099ff;
+
+}
+
+/*-------------HEADING-------------*/
+h1,
+h2,
+h3 {
+    font-weight: 300;       
+    text-transform: uppercase;
+}
+
+
+h1 { /*h1 USADO PARA TÍTULO GRANDE NO BANNER*/
+    margin-top: 0;
+    margin-bottom: .1em;
+    font-size: 200%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 { /*h3 USADO PARA O SUBTÍTULO  NO BANNER*/
+    font-size: 100%;
+    margin-bottom: 1em;
+    opacity: .8;
+}
+h4 { /*H4 USADO PARA O TÍTULO DE QUALQUER SECÇÃO*/
+    margin-bottom: 1em;
+    font-size: 180%;
+    text-transform: uppercase;
+}
+
+
+/*-------------HEADER-------------*/
+
+
+.main-header{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: backgroundSlide 20s ease-in-out infinite;     
+}
+
+@keyframes backgroundSlide{
+    0%,100% {
+     background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1))   , url('../imagens/4042.jpg');
+    } 
+
+    50% {
+         background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1)), url('../imagens/O72HCC0.jpg');
+    }        
+}
+
+.hero {
+    position: absolute;
+    width:1300px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.hero-mensagem{
+    width: 50%;
+}
+.hero-enfase {
+    font-weight: bold;
+    color: #0099ff;
+}
+.hero h1 {
+    margin-bottom:1em ;
+    z-index: 100;
+}
+
+.hero p {
+    opacity: .7;
+}
+.hero .faca-login{
+    opacity: 1;
+}
+.hero i {
+    font-size: 100%;
+    margin-top: 20px;
+    margin-left: .5em;
+}
+
+
+/*-----------------SVG----------------*/
+.waves-do-header {
+    position: absolute;
+    bottom: 0px;
+    width: 120%;
+    left: 0;
+
+}
+
+/*---------------FORM---------------*/
+
+.form-container {
+    position: absolute;
+    border-radius: 5px;
+    padding: 1em 1em 2em 1em;
+    width: 400px;
+    color: black;
+    background: white;
+    right: 0;
+    top: -4.5em;
+    text-align: center;
+    box-shadow: 1px 2px 8px 0 rgba(0,0,0,0.3),
+                -2px -2px 2px 0 rgba(0,0,0,0.1);
+    float: right;
+    z-index: 9999;
+}
+
+.form-container form{
+    border: 0px solid black;
+    width: 100%;
+}       
+
+.form-container form header .form-login-header-icon {
+    color:  #0099ff;
+    font-size: 170%;
+    margin-top: -45px;
+    display: block;
+    background: white;
+    border-radius: 50px;
+    width: 50px;
+    margin-left: 43%;
+    height: 50px;
+    text-align: center;
+    border:1.4px solid rgba(0,0,0,.8);
+    
+
+}
+.form-container form header h3{
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.form-container form header p{
+    font-size: 80%;
+}
+
+.form-container form .campo{
+    text-align: left;
+    margin-top: 30px;
+}
+
+.form-container form .campo p{
+    position: relative;
+}
+
+.form-container form .campo  i{
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    color: #0099ff;
+}
+
+
+.form-container form .campo input{
+    width: 100%;
+    height: 40px;
+    padding: 1em 1em 1em 3em;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 75%;
+}
+
+.form-container form .campo-btn button.btn-login{
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1em;
+    background: #0099ff;
+    color: white;
+    border: 0;
+    margin-top: 1em;
+}
+
+/*--------------footer-------------*/
+
+footer {
+    font-size: 90%;
+    width: 100%;
+    padding: .5em;
+    position: absolute;
+    bottom: 0em;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+}
+
+/*--------------------------------------------------*/
+/* Big tablets to 1200px (widths smaller that the 1140px row)*/
+/*-------------------------------------------------*/
+
+@media only screen and (max-width: 1304px) {
+    .row {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .waves-do-header {
+        width: 110%;
+        z-index: 9999;
+    }
+    .form-container {
+        top: 5em;
+        right: 0em;
+
+    }
+
+    .hero {
+        width: 1200px;
+    }
+
+    footer{
+        padding-bottom: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    .row {
+        max-width: 950px;
+
+    }
+
+    .hero {
+        width: 950px;
+    }
+    .hero-mensagem {
+        width: 50%;
+    }
+    h1{
+        font-size: 190%;
+    }
+
+    
+}
+
+/*--------------------------------------------------*/
+/* Small tablets to big tablets: from 768px to 1023px; */
+/*-------------------------------------------------*/
+
+@media only screen and (max-width: 1023px) {
+    .row {
+        max-width: 700px;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero {
+        width: 700px;
+        top: 25%;
+        text-align: center;   
+        z-index: 11;
+    }
+    .hero-mensagem{
+        width: 100%;
+    }
+    h1{
+        font-size: 170%;
+    }
+    .hero p {
+        font-size: 90%;
+    }
+    .hero .faca-login{
+        display: none;
+    }
+    .form-container{
+        position: relative;
+        margin-top: 11em;
+        z-index: 9000;
+    }
+
+    .waves-do-header {
+        z-index: 10;
+    }
+
+    .main-header {
+        padding-bottom: 47em;
+    }
+
+    .logo-div img{
+        width: 90%;
+    }
+    .main-nav{
+        display: none;
+    }
+    .main-nav {
+        position: absolute;
+        top: 40px;
+        right: 0em;
+        width: 170px;
+        padding: .5em 1.2em 0 0;
+        background: white;
+        border-radius: 5px;  
+        z-index: 9999;  
+    }
+    .main-nav li {
+        margin-bottom: 1em;
+        display: block;
+    }
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    .mobile-nav-icon {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    
+}
+
+/*--------------------------------------------------*/
+/* Small phones to small tablets: from 481 to 767px; */
+/*-------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+     h1{
+        font-size: 140%;
+    }
+    .hero {
+        width: 400px;
+    }
+    .hero p {
+        font-size: 90%;
+    }
+    
+    .row {
+        max-width: 400px;
+    }
+
+     .logo-div img{
+        width: 180%;
+    }
+
+    .main-header {
+        padding-bottom: 48em;
+    }
+
+    .waves-do-header {
+    width:300%;
+    }
