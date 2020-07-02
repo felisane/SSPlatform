@@ -170,11 +170,11 @@ h4 { /*H4 USADO PARA O TÍTULO DE QUALQUER SECÇÃO*/
 
 @keyframes backgroundSlide{
     0%,100% {
-     background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1))   , url('../imagens/4042.jpg');
+     background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1))   , url('../imagens/4044.jpg');
     } 
 
     50% {
-         background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1)), url('../imagens/O72HCC0.jpg');
+         background-image: linear-gradient(to top, rgba(63,72,255,.6), rgba(0,0,0,1)), url('../imagens/O72HCC1.jpg');
     }        
 }
 
