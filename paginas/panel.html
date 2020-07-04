@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panel</title>
+	<meta charset="UTF-8">
+	<meta lang="pt-br">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<!--Ficheiro responsável elos icons-->
+	<link rel="stylesheet" type="text/css" href="resources/vendors/css/ionicons.min.css">
+	<link rel="stylesheet" href="../css/panel.css">
+</head>
+<body>
+	<header class="main-header">
+		<nav class="navegacao-principal">
+			<div class="row">
+				<div class="logo-div">
+					<img src="../imagens/logo.png" alt="logotipo">
+					<form>
+						<input type="search">
+					</form>
+				</div>
+				<div class="nav-direita">
+							<img src="../imagens/usuario.png">
+							<span class="nome_do_usuario">Carlos Josemar</span>							
+					<!--Menú da versão mobile-->
+					<a class="mobile-nav js--mobile-nav"><i class="ion-navicon-round"></i></a>
+				</div>
+			</div>
+		</nav>
+		<nav class="navegacao-secundaria">
+			<div class="row">
+				<ul>
+					<a href="#"><li>Cliente</li></a>
+					<a href="#"><li>Subscrição</li></a>
+					<a href="#"><li>Sinistro</li></a>
+					<a href="#"><li>Reseguro</li></a>
+					<a href="#"><li>Relatório</li></a>
+					<a href="#"><li>Parametrização</li></a>
+				</ul>
+		    </div>
+  		</nav>
+	</header>
+</body>
+<section class="corpo">
+	<div class="row">
+		<div class="form-container">
+			<form class="regista-cliente-form" action="#" method="POST">
+				<div class="header">
+					<h3>Registro de Cliete</h3>
+			    </div>
+			    <br>
+			    <div class="pagina">	
+					<div class="titulo"><h3>Dados:</h3></div>
+				    <div class="campo">
+						<label>Entidade</label>
+						<input class="entidade" id="entidade" type="text" list="entidade_lista"/>
+			            <datalist id="entidade_lista">
+			                <option value="Empresa">
+			                <option value="Particular">
+			            </datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Código</label>
+					    <input type="number" name="codigo_cliente" id="codigo_cliente" value="1">
+					</div>
+					<br>
+
+			        <div class="campo">
+						<label>Nome</label>
+						<input type="text" name="nome_cliente" id="nome_cliente" placeholder="Nome do Cliente">
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Documento de identificação</label>
+						<input class="docmento_identificacao_cliente" id="docmento_identificacao_cliente" type="text" list="docmento_identificacao_cliente_lista"/>
+			            <datalist id="docmento_identificacao_cliente_lista">
+			                <option value="Empresa">
+			                <option value="Particular">
+			            </datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Data de Aniversário (Opcional)</label>
+					    <input type="date" name="data_aniversario_cliente" id="data_aniversario_cliente">
+					</div>
+					<br>
+
+			        <div class="campo">
+						<label>Banco  (Opcional)</label>
+						<input type="text" name="banco_cliente" id="banco_cliente" placeholder="Nome do banco" list="banco_cliente_lista">
+						<datalist id="banco_cliente_lista">
+							<option value="BNA - Banco nacional de Angola">
+						</datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Nª do Cartão Bancário  (Opcional)</label>
+						<input type="number" name="cartao_bancario_cliente" id="cartao_bancario_cliente" placeholder="000000000000000000">
+					</div>
+					<br>
+
+
+					<div class="campo">
+						<label>Gerente  (Opcional)</label>
+						<input type="text" name="gerente" id="gerente" placeholder="Nome do Gerente">
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Utilizador  (Opcional)</label>
+						<input type="text" name="utlizador" id="Utilizador" placeholder="Nome do utlilizador" list="utlilizador_lista">
+						<datalist id="utlilizador_lista">
+							<option value="Carlos Josemar">
+						</datalist>
+					</div>
+					<br>
+                </div>
+
+                <div class="pagina">	
+					<div class="titulo"><h3>Residència:</h3></div>
+				    <div class="campo">
+						<label>Província  (Opcional)</label>
+						<input class="provincia" id="provincia" type="text" list="provincia_lista"/>
+			            <datalist id="provincia_lista">
+			                <option value="Luanda">
+			            </datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Municiipio  (Opcional)</label>
+						<input class="municipio" id="municipio" type="text" list="municipio_lista"/>
+			            <datalist id="municipio_lista">
+			                <option value="Kilamba Kiaxi">
+			            </datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Endereço</label>
+						<input class="endereco" id="endereco" type="text" placeholder="Bairro, Rua, nª de residência"/>			            
+					</div>
+					<br>
+				</div>
+
+				<div class="pagina">	
+					<div class="titulo"><h3>Contacto:</h3></div>
+				    <div class="campo">
+						<label>Telefone Fixo  (Opcional)</label>
+						<input class="telefone_fixo_cliente" id="telefone_fixo_cliente" type="number"/>
+			            <datalist id="provincia_lista">
+			                <option value="Luanda">
+			            </datalist>
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Telefone Móvel</label>
+						<input class="telefone_movel_cliente" id="telefone_movel_cliente" type="number">
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Email  (Opcional)</label>
+						<input class="email_cliente" id="email_cliente" type="email" placeholder="email do cliente"/>	
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Confirme o Email   (Opcional)</label>
+						<input class="email2_cliente" id="email2_cliente" type="email" placeholder="Confirme o email do cliente"/>	
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>URL  (Opcional)</label>
+						<input class="url_website_cliente" id="url_website_cliente" type="text" placeholder="Endereço do website do Cliente"/>	
+					</div>
+					<br>
+                    
+                    <div class="campo">
+						<label>Caixa Postal  (Opcional)</label>
+						<input class="caixa_postal_cliente" id="caixa_postal_cliente" type="text" placeholder="Caixa Postal do Cliente"/>	
+					</div>
+					<br>
+
+					<div class="campo">
+						<label>Fax  (Opcional)</label>
+						<input style="" class="fax_cliente" id="fax_cliente" type="number" placeholder="Endereço do website do Cliente"/>	
+					</div>
+					<br>
+				</div>
+
+				<div class="pagina">	
+					<div class="titulo"><h3>Outros:</h3></div>
+					<div class="campo-btn">
+						<label>Informação acdcional</label>
+						<textarea name="outro" id="outro" placeholder="Alguma qualquer informação adcional"> </textarea>
+					</div>
+                </div>
+                <br>
+				<div class="campo-btn">
+					<button class="btn-salvar">Salvar</button>
+				</div>	        
+			</form>
+		</div>
+	</div>
+</section>
+</body?
+    <!--Bibiotecas javascrit[JQUERY]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="resources/vendors/js/jquery.waypoints.min.js"></script>
+
+     <!--o ficheiro que contém o código javascript-->
+    <script src="js/script.js"></script>
+</html>
