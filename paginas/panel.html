@@ -69,9 +69,14 @@
 							</div>
 							
 
-					        <div class="campo">
+					        <div class="campo nome_cliente">
 								<label>Nome</label>
 								<input type="text" name="nome_cliente" id="nome_cliente" placeholder="Nome do Cliente">
+							</div>
+
+							<div class="campo">
+								<label>Data de Aniversário <span class="opcional">(Opcional)<span></label>
+							    <input type="date" name="data_aniversario_cliente" id="data_aniversario_cliente">
 							</div>
 							
 
@@ -82,17 +87,18 @@
 					                <option value="Empresa">
 					                <option value="Particular">
 					            </datalist>
-							</div>
-							
+							</div>	
 
-							<div class="campo">
-								<label>Data de Aniversário (Opcional)</label>
-							    <input type="date" name="data_aniversario_cliente" id="data_aniversario_cliente">
-							</div>
-							
-
-					        <div class="campo">
-								<label>Banco  (Opcional)</label>
+						</div>
+						<div class="campo">
+							<span class="nxtBtn">Avançar</span>
+						</div>	
+					</div>	
+					<div class="pagina">
+						<div class="titulo"><h3>Dados adcionais:</h3></div>
+						<div class="grid">
+					        <div class="campo banco_cliente">
+								<label>Banco  <span class="opcional">(Opcional)<span></label>
 								<input type="text" name="banco_cliente" id="banco_cliente" placeholder="Nome do banco" list="banco_cliente_lista">
 								<datalist id="banco_cliente_lista">
 									<option value="BNA - Banco nacional de Angola">
@@ -101,37 +107,38 @@
 							
 
 							<div class="campo">
-								<label>Nª do Cartão Bancário  (Opcional)</label>
+								<label>Nª do Cartão Bancário  <span class="opcional">(Opcional)<span></label>
 								<input type="number" name="cartao_bancario_cliente" id="cartao_bancario_cliente" placeholder="000000000000000000">
 							</div>
 							
 
 
 							<div class="campo">
-								<label>Gerente  (Opcional)</label>
+								<label>Gerente  <span class="opcional">(Opcional)<span></label>
 								<input type="text" name="gerente" id="gerente" placeholder="Nome do Gerente">
 							</div>
 							
 
 							<div class="campo">
-								<label>Utilizador  (Opcional)</label>
+								<label>Utilizador  <span class="opcional">(Opcional)<span></label>
 								<input type="text" name="utlizador" id="Utilizador" placeholder="Nome do utlilizador" list="utlilizador_lista">
 								<datalist id="utlilizador_lista">
 									<option value="Carlos Josemar">
 								</datalist>
 							</div>
 						</div>
-						<div class="campo">
-							<span class="nxtBtn">Avançar</span>
+						<div class="campo btn">
+							<span class="prev-1 prev">Anterior</span>
+							<span class="next-1 next">Próximo</span>
 						</div>
 					</div>	
 	               
 
 	                <div class="pagina">	
-						<div class="titulo"><h3>Residència:</h3></div>
+						<div class="titulo"><h3>Residência:</h3></div>
 						<div class="grid">
 						    <div class="campo">
-								<label>Província  (Opcional)</label>
+								<label>Província  <span class="opcional">(Opcional)<span></label>
 								<input class="provincia" id="provincia" type="text" list="provincia_lista"/>
 					            <datalist id="provincia_lista">
 					                <option value="Luanda">
@@ -139,7 +146,7 @@
 							</div>
 
 							<div class="campo">
-								<label>Municiipio  (Opcional)</label>
+								<label>Municiipio  <span class="opcional">(Opcional)<span></label>
 								<input class="municipio" id="municipio" type="text" list="municipio_lista"/>
 					            <datalist id="municipio_lista">
 					                <option value="Kilamba Kiaxi">
@@ -151,10 +158,11 @@
 								<input class="endereco" id="endereco" type="text" placeholder="Bairro, Rua, nª de residência"/>			            
 							</div>
 
+
 						</div>
 						<div class="campo btn">
-							<span class="prev-1 prev">Anterior</span>
-							<span class="next-1 next">Próximo</span>
+							<span class="prev-2 prev">Anterior</span>
+							<span class="next-2 next">Próximo</span>
 						</div>
 					</div>
 
@@ -162,7 +170,7 @@
 						<div class="titulo"><h3>Contacto:</h3></div>
 						<div class="grid">
 						    <div class="campo">
-								<label>Telefone Fixo  (Opcional)</label>
+								<label>Telefone Fixo  <span class="Opcional">(Opcional)<span></label>
 								<input class="telefone_fixo_cliente" id="telefone_fixo_cliente" type="number"/>
 					            <datalist id="provincia_lista">
 					                <option value="Luanda">
@@ -175,33 +183,28 @@
 							</div>
 
 							<div class="campo">
-								<label>Email  (Opcional)</label>
+								<label>Email  <span class="opcional">(Opcional)<span></label>
 								<input class="email_cliente" id="email_cliente" type="email" placeholder="email do cliente"/>	
 							</div>
 
 							<div class="campo">
-								<label>Confirme o Email   (Opcional)</label>
-								<input class="email2_cliente" id="email2_cliente" type="email" placeholder="Confirme o email do cliente"/>	
-							</div>
-
-							<div class="campo">
-								<label>URL  (Opcional)</label>
+								<label>URL  <span class="opcional">(Opcional)<span></label>
 								<input class="url_website_cliente" id="url_website_cliente" type="text" placeholder="Endereço do website do Cliente"/>	
 							</div>
 		                    
 		                    <div class="campo">
-								<label>Caixa Postal  (Opcional)</label>
+								<label>Caixa Postal  <span class="opcional">(Opcional)<span></label>
 								<input class="caixa_postal_cliente" id="caixa_postal_cliente" type="text" placeholder="Caixa Postal do Cliente"/>	
 							</div>
 
 							<div class="campo">
-								<label>Fax  (Opcional)</label>
+								<label>Fax  <span class=opcional">(Opcional)<span></label>
 								<input style="" class="fax_cliente" id="fax_cliente" type="number" placeholder="Endereço do website do Cliente"/>	
-							</div>
+							</div>		
 						</div>
 						<div class="campo btn">
-							<span class="prev-2 prev">Anterior</span>
-							<span class="next-2 next">Próximo</span>
+							<span class="prev-3 prev">Anterior</span>
+							<span class="next-3 next">Próximo</span>
 						</div>
 					</div>
 
@@ -214,7 +217,7 @@
 							</div>
 						</div>
 						<div class="campo btn">
-							<span class="prev-3 prev">Anterior</span>	
+							<span class="prev-4 prev">Anterior</span>	
 						    <button class="btn-salvar">Salvar</button>
 						</div>	
 					</div> 				      
