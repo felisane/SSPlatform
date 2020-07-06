@@ -27,6 +27,8 @@ const segundoNextBtn = document.querySelector('.next-1');
 const terceiroPrevBtn = document.querySelector('.prev-2');
 const terceiroNextBtn = document.querySelector('.next-2');
 const quartoPrevBtn = document.querySelector('.prev-3');
+const quartoNextBtn = document.querySelector('.next-3');
+const quintoPrevBtn = document.querySelector('.prev-4');
 const submitBtn = document.querySelector('.btn-salvar');
 
 const fazslidefuncao = (botao, margin) => {
@@ -35,12 +37,15 @@ const fazslidefuncao = (botao, margin) => {
 	});
 }
 
-fazslidefuncao(primeiroNextBtn, -21.7);
+fazslidefuncao(primeiroNextBtn, -20.7);
 fazslidefuncao(segundoPrevBtn, 0);
-fazslidefuncao(segundoNextBtn, -43.4);
-fazslidefuncao(terceiroPrevBtn, -21.7);
-fazslidefuncao(terceiroNextBtn, -65.1);
-fazslidefuncao(quartoPrevBtn, -43.4);
+fazslidefuncao(segundoNextBtn, -41.4);
+fazslidefuncao(terceiroPrevBtn, -20.7);
+fazslidefuncao(terceiroNextBtn, -62.1);
+fazslidefuncao(quartoPrevBtn, -41.4);
+fazslidefuncao(quartoNextBtn, -82.8);
+fazslidefuncao(quintoPrevBtn, -41.4);
+
 
 submitBtn.addEventListener("click", ()=>{
 		alert('registrado com sucesso');
