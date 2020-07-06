@@ -199,11 +199,11 @@ nav {
 
 .form-outer form {  
     display: flex;
-    width: 560%;
+    width: 550%;
 }
 
 .form-outer form .pagina{
-    width: 21.7%;
+    width: 20.7%;
     transition: margin-left .2s ease-in-out;  
 }
 
@@ -221,7 +221,7 @@ nav {
 }
 
 .form-outer form .pagina .campo {
-    margin: 20px 150px 20px 0;
+    margin: 20px 100px 20px 0;
     display: flex;
     flex-direction: column;
 }
@@ -238,7 +238,7 @@ nav {
 
 .form-outer form .pagina .campo input {
     padding: .5em;
-    width: 270px;
+    width: 300px;
     border-radius:5px;
     border: 1px solid lightgray;
 }
@@ -246,10 +246,23 @@ nav {
     width: 150px;
 }
 
+.form-outer form .pagina .campo textarea {
+    border: 1px solid lightgrey;
+    padding: 1em;
+    width: 700px;
+    height: 276px;
+}
 
+.form-outer form .pagina .campo .opcional {
+    opacity: .7;
+    font-size: 90%;
+    font-weight: 10;
+}
 .form-outer form .pagina .campo button,
 .form-outer form .pagina .campo .nxtBtn,
-.form-outer form .pagina .campo span
+.form-outer form .pagina .campo .next,
+.form-outer form .pagina .campo .prev
+
 
  {
     text-transform: uppercase;
@@ -272,7 +285,9 @@ nav {
 
 .form-outer form .pagina .campo button:hover,
 .form-outer form .pagina .campo .nxtBtn:hover,
-.form-outer form .pagina .campo span:hover {
+.form-outer form .pagina .campo .next:hover,
+.form-outer form .pagina .campo .prev:hover
+ {
     background: #0099dd;
 }
 
@@ -294,3 +309,28 @@ nav {
 .form-outer form .pagina .campo .registrar {
     margin-left: 3px;
 } 
+
+.form-container form  .nome_cliente{
+    grid-column: 1/3;
+}
+
+.form-container form  .nome_cliente #nome_cliente{
+    width: 100%;
+    grid-column: 1/3;
+}
+
+.form-container form  .banco_cliente{
+    border: px solid red;
+    grid-column: 1/3;
+}
+
+.form-container form  .banco_cliente #banco_cliente{
+    width: 99%;
+    grid-column: 1/3;
+}
+
+.form-container form  .campo #endereco {
+    margin-bottom:9.2em;
+
+}
+
