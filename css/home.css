@@ -245,6 +245,18 @@ nav {
  }
 
 /*---------------CORPO--------------*/
+
+.corpo:before {
+    content: "BEM VINDO";
+    font-size: 650%;
+    position: absolute;
+    left: 15%;
+    z-index: 1;
+    top: 38%;
+    transform: rotate(-45deg);
+    color: rgba(230,230,230,1);   
+}
+
 .corpo {
     /*background-image: -webkit-linear-gradient(bottom, rgba(240,249,255,0.4), rgba(6,61,98,.5)),url('../imagens/3327590.jpg');
     background-image: -o-linear-gradient(bottom, rgba(240,249,255,0.4), rgba(6,61,98,.5)),url('../imagens/3327590.jpg');*/
@@ -260,6 +272,8 @@ nav {
     position: relative;
 }
 
+
+
 .corpo-header {
     position: absolute;
     display: flex;
@@ -268,6 +282,45 @@ nav {
     top: 1em;
 }
 
+.hero-mensagem {
+    width: 800px;
+    padding: 2em;
+    background: white;
+    z-index: 2;
+    box-shadow: 
+    3px 3px 10px  rgba(0,0,0,.1),
+    -2px -2px 4px  rgba(255,255,255,1);
+}
+
+.hero-enfase-azul {
+    color: #0099ff;
+}
+
+.hero-enfase-preto{
+    opacity: 1;
+    font-size: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+
+.hero-mensagem p{
+    opacity: .7;
+    font-size: 90%;
+}
+
+.hero-mensagem button {
+    background: #0099ff;
+    padding: 1em;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-size: 60%;
+    font-weight: bold;
+
+}
  /*------------------form----------------*/
 
  .form-container {
