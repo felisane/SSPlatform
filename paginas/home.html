@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panel</title>
+	<meta charset="UTF-8">
+	<meta lang="pt-br">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<!--Ficheiro responsável elos icons-->
+	<link rel="stylesheet" type="text/css" href="../resources/vendors/css/ionicons.min.css">
+	<link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+	<header class="main-header">
+		<nav class="navegacao-principal">	
+				<div class="logo-div">
+					<img src="../imagens/logo.png" alt="logotipo">				
+				</div>		
+		</nav>
+		<nav class="navegacao-secundaria">			
+				<ul>
+					<a href="home.html"><li><i class="ion-home"></i>Home</li></a>
+					<a href="panel.html"><li><i class="ion-android-person-add"></i>Cliente</li></a>
+					<a href="#"><li><i class="ion-model-s"></i>Subscrição</li></a>
+					<a href="#"><li><i class="ion-android-warning"></i>Sinistro</li></a>
+					<a href="#"><li><i class="ion-ios-bookmarks"></i>Reseguro</li></a>
+					<a href="#"><li><i class="ion-clipboard"></i>Relatório</li></a>
+					<a href="#"><li><i class="ion-levels"></i>Parametrização</li></a>
+				</ul>
+  		</nav>
+	</header>
+</body>
+<section class="corpo">
+	<header class="corpo-header">
+		<div class="nav-esquerda">
+			<form>
+				<label>Pesquisar</label>
+				<input type="search" placeholder="pesquise clientes, automóveis, etc...">
+				<i class="ion-ios-search-strong"></i>
+			</form>
+		</div>
+		<div class="nav-direita">
+			<img src="../imagens/usuario.png">
+			<span class="nome_do_usuario">Carlos Josemar</span>	
+			<i class="ion-arrow-down-b menu-usuario-icon js--menu-usuario-icon"></i>
+			<div class="menu-usuario">
+				<div class="usuario-info-menu">
+				    <i class="ion-android-person"></i>
+				    <span>carlosJosemar77h@gmail.com</span>		
+				</div>
+				<div class="logout">
+					<i class="ion-android-exit"></i>
+					<span>Terminar a Sessão</span>		
+				</div>
+			</div>				
+			<!--Menú da versão mobile-->
+			<a class="mobile-nav js--mobile-nav"><i class="ion-navicon-round"></i></a>
+		</div>
+	</header>
+	<div class="hero-mensagem">
+		<h1>Seja Bem Vindo a <span class="hero-enfase-azul">SSPlatform</span></h1>
+		<br>
+		<p>Gerenciamento de clientes nunca foi mais fácil em nossa própria plataforma. Os melhores recursos para <span class="hero-enfase-preto">facilitar o seu trabalho</p>
+		<button>Começar agora</button>
+	</div>
+</section>
+</body>
+    <!--Bibiotecas javascrit[JQUERY]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="resources/vendors/js/jquery.waypoints.min.js"></script>
+
+     <!--o ficheiro que contém o código javascript-->
+    <script src="../js/script.js"></script>
+</html>
