@@ -15,6 +15,21 @@
 	 		icon.removeClass('ion-close-round');
 	 	}
  	});
+    
+    $('.js--menu-usuario-icon').click(function(){  
+	 	var nav = $('.menu-usuario');
+	 	var icon = $('.js--menu-usuario-icon');
+
+	 	nav.slideToggle(200);
+
+	 	if (icon.hasClass('ion-arrow-down-b')) {
+	 		icon.removeClass('menu-usuario');
+
+	 	}else{
+	        icon.addClass('menu-usuario');
+	 	}
+ 	});
+
  });
 
 
@@ -31,20 +46,41 @@ const quartoNextBtn = document.querySelector('.next-3');
 const quintoPrevBtn = document.querySelector('.prev-4');
 const submitBtn = document.querySelector('.btn-salvar');
 
-const fazslidefuncao = (botao, margin) => {
+const progressiveText= document.querySelectorAll('.step p');
+const progressiveChecka= document.querySelectorAll('.step .checka');
+const numero= document.querySelectorAll('.step .numero');
+
+let max =  4;
+let current = 1;
+
+const fazslidefuncaoAvancar = (botao, margin) => {
 		botao.addEventListener("click", ()=>{
 		slidepaginas.style.marginLeft= margin+"%";
+		numero[current - 1].classList.add('active');
+		progressiveChecka[current - 1].classList.add('active');
+		progressiveText[current - 1].classList.add('active');
+		current +=1;
 	});
 }
 
-fazslidefuncao(primeiroNextBtn, -20.7);
-fazslidefuncao(segundoPrevBtn, 0);
-fazslidefuncao(segundoNextBtn, -41.4);
-fazslidefuncao(terceiroPrevBtn, -20.7);
-fazslidefuncao(terceiroNextBtn, -62.1);
-fazslidefuncao(quartoPrevBtn, -41.4);
-fazslidefuncao(quartoNextBtn, -82.8);
-fazslidefuncao(quintoPrevBtn, -41.4);
+const fazslidefuncaoRecuar = (botao, margin) => {
+		botao.addEventListener("click", ()=>{
+		slidepaginas.style.marginLeft= margin+"%";
+		numero[current - 2].classList.remove('active');
+		progressiveChecka[current - 2].classList.remove('active');
+		progressiveText[current - 2].classList.remove('active');
+		current -=1;
+	});
+}
+
+fazslidefuncaoAvancar(primeiroNextBtn, -25);
+fazslidefuncaoRecuar(segundoPrevBtn, 0);
+fazslidefuncaoAvancar(segundoNextBtn, -50);
+fazslidefuncaoRecuar(terceiroPrevBtn, -25);
+fazslidefuncaoAvancar(terceiroNextBtn, -75);
+fazslidefuncaoRecuar(quartoPrevBtn, -50);
+fazslidefuncaoAvancar(quartoNextBtn, -100);
+fazslidefuncaoRecuar(quintoPrevBtn, -75);
 
 
 submitBtn.addEventListener("click", ()=>{
