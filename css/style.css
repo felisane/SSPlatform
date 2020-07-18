@@ -165,7 +165,7 @@ h4 { /*H4 USADO PARA O TÍTULO DE QUALQUER SECÇÃO*/
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    animation: backgroundSlide 20s ease-in-out infinite;     
+    animation: backgroundSlide 20s ease-in-out infinite;   
 }
 
 @keyframes backgroundSlide{
@@ -270,6 +270,11 @@ h4 { /*H4 USADO PARA O TÍTULO DE QUALQUER SECÇÃO*/
 .form-container form .campo{
     text-align: left;
     margin-top: 30px;
+}
+
+.form-container form .campo .banco{
+    border: 1px solid red;
+    grid-column-end: 3;
 }
 
 .form-container form .campo p{
@@ -458,7 +463,7 @@ footer {
 /*-------------------------------------------------*/
 
 @media only screen and (max-width: 767px) {
-    h1{
+     h1{
         font-size: 140%;
     }
     .hero {
@@ -485,9 +490,9 @@ footer {
     }
 
     .form-container{
-        width: 97%;
+        width: 100%;
     }
-    
-     .form-container form header .form-login-header-icon {
+
+    .form-container form header .form-login-header-icon {
         margin-left: 42%;
     }

@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     background: #0d2249;
     color: white;
+    z-index: 3;
 }
 
 /* ----------------------------------------------- */
@@ -49,10 +50,7 @@ body {
     border: 0px solid red;
 }
 
-.center {
-    margin-top: 10em;
-    position: relative;
-}
+
 section {
     padding: 0px 2em;
     width: 100%;
@@ -167,6 +165,7 @@ nav {
     top: 3em;
     width: 40%;
     padding: .5em;
+    z-index: 3;
 }
 .menu-usuario div {
     display: flex;
@@ -181,19 +180,13 @@ nav {
     border-bottom:  1px solid rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
+
 }
 
 .menu-usuario .usuario-info-menu span{
     font-size: 70%;
 }
 
-
-.mobile-nav{
-    display: none;
-    font-size: 160%;
-    float: right;
-    cursor: pointer;
-}
  .navegacao-secundaria {
     width: 100%;
     /*background:  #063d62;*/
@@ -244,15 +237,26 @@ nav {
     color:  #0099ff;
  }
 
+
+
+/*----------------MOBILE NAV-------------*/
+
+.mobile-nav{
+    display: none;
+    font-size: 160%;
+    cursor: pointer;
+    z-index: 4;
+}
+
 /*---------------CORPO--------------*/
 
 .corpo:before {
     content: "BEM VINDO";
     font-size: 650%;
     position: absolute;
-    left: 15%;
+    left: auto;
     z-index: 1;
-    top: 38%;
+    top: auto;
     transform: rotate(-45deg);
     color: rgba(230,230,230,1);   
 }
@@ -286,7 +290,7 @@ nav {
     width: 800px;
     padding: 2em;
     background: white;
-    z-index: 2;
+    z-index: 1;
     box-shadow: 
     3px 3px 10px  rgba(0,0,0,.1),
     -2px -2px 4px  rgba(255,255,255,1);
@@ -306,7 +310,7 @@ nav {
 
 .hero-mensagem p{
     opacity: .7;
-    font-size: 90%;
+    font-size: 85%;
 }
 
 .hero-mensagem button {
@@ -315,295 +319,172 @@ nav {
     color: white;
     border: 0;
     border-radius: 5px;
-    margin-top: 2em;
+    margin-top: 3em;
     text-transform: uppercase;
     font-size: 60%;
     font-weight: bold;
 
 }
- /*------------------form----------------*/
 
- .form-container {
-    margin-top: 1.5em;
-    background: white;
-    padding: 1.5em 1em 1em 1em;
-    width: 744.8px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 
-          4px 4px 3px 0 rgba(0,0,0,0.1),
-          -1px -1px 3px 0 rgba(0,0,0,0.1);
-
-}
-
-.form-container .header{
-    font-size: 100%;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-}
-
-.form-container .form-outer {
-    width: 100%;
-    overflow: hidden;
-}
-
-.form-outer form {  
-    display: flex;
-    width: 400.1%;
-}
-
-.form-outer form .pagina{
-    width: 25%;
-    transition: margin-left .3s ease-in-out;  
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    width: 100%;
-    margin: 0 auto;
-
-}
-.form-outer form .pagina .titulo{
-    text-align: left;
-    font-size: 90%;
-}
-
-.form-outer form .pagina .campo {
-    margin: 10px 110px 10px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.form-outer form .pagina .campo label {
-    float: left;
-    font-size: 70%;
-    text-align: left;
-    margin-top: 1em;
-    font-weight: 600;
-    margin-bottom:  1em;
-}
-
-.form-outer form .pagina .campo input {
-    padding: .5em;
-    width: 296px;
-    border-radius:5px;
-    border: 1px solid rgba(0,0,0,.3);
-}
-
-.form-outer form .pagina .campo input[name=codigo_cliente] {
-    width: 150px;
-}
-
-.form-outer form .pagina .campo textarea {
-    border: 1px solid lightgrey;
-    padding: 1em;
-    width: 704px;
-    height: 223px;
-    font-family: 'lato', 'Arial', sans-serif;
-    border-radius: 5px;
-    font-size: 80%;
-}
-
-.form-outer form .pagina .campo .opcional {
-    opacity: .7;
-    font-size: 90%;
-    font-weight: 10;
-}
-.form-outer form .pagina .campo button,
-.form-outer form .pagina .campo .nxtBtn,
-.form-outer form .pagina .campo .next,
-.form-outer form .pagina .campo .prev
- {
-    text-transform: uppercase;
-    margin:10px auto 0 auto;
-    padding: .8em;
-    width: 118.2%;
-    display: block;
-    font-size: 80%;
-    background: #0099ff;
-    border: 0;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-weight: 500;
-    transition: .5s ease;
-    text-decoration: none;
-
-
-}
-
-.form-outer form .pagina .campo button:hover,
-.form-outer form .pagina .campo .nxtBtn:hover,
-.form-outer form .pagina .campo .next:hover,
-.form-outer form .pagina .campo .prev:hover
- {
-    background: #0099dd;
-}
-
-.form-outer form .pagina .btn {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: .7em;
-
-}
-
-
-
-.form-outer form .pagina .campo .prev {
-    margin-right: 3px;
-    background: transparent;
-    border: 2px solid #0d2249;
-    color: #0d2249; 
-}
-
-.form-outer form .pagina .campo .prev:hover {
-    background: #0d2249;
-    color: white;
-}
-
-.form-outer form .pagina .campo .next,
-.form-outer form .pagina .campo .registrar {
-    margin-left: 3px;
-} 
-
-.form-container form  .nome_cliente{
-    grid-column: 1/3;
-}
-
-.form-container form  .nome_cliente #nome_cliente{
-    width: 100%;
-    grid-column: 1/3;
-}
-
-.form-container form  .banco_cliente{
-    border: px solid red;
-    grid-column: 1/3;
-}
-
-.form-container form  .banco_cliente #banco_cliente{
-    width: 100%;
-    grid-column: 1/3;
-}
-.form-container form  .endereco {
-    grid-column: 1/3;
-}
-
-
-.form-container form  .campo #endereco {
-    margin-bottom:7.2em;
-    width: 100%;
-}
-
-/*-----------------progressive bar---------------*/
+/*--------------------------------------------------*/
+/* Big tablets to 1200px (widths smaller that the 1140px row)*/
+/*-------------------------------------------------*/
+@media only screen and (max-width: 1200px) {
+    html,body {
+        font-size: 19px;
     
-.progress-bar {
-    width: 90%;
-    display: flex;
-    margin: 30px auto;
-}
-
-.progress-bar .step {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.progress-bar .step p {
-    opacity: .7;
-    font-size:70%;
-    margin-bottom: .5em;
-}
-
-.progress-bar .step .numero:before,
-.progress-bar .step .numero:after {
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 401%;
-    bottom: 11px;
-    left: 34px;
-    background:  black;
-    opacity: .1;
-}
-
-
-.progress-bar .step:last-child .numero:before,
-.progress-bar .step:last-child .numero:after {
-    display: none;
-}
- 
- .progress-bar .step .numero.active{
-    opacity: 1;
-    border-color: #0099ff;
-    background: #0099ff;
-    color: white;
- }
-.progress-bar .step .numero.active:after {
-    opacity: 1;
-    background:#0099ff;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animacao 0.3s linear forwards;
-}
-
-
-.progress-bar .step .numero {
-    border-color: red;
-
-}
-
-@keyframes animacao{
-    100% {
-        transform: scaleX(1);
     }
+    .main-header{
+        width: 26%;
+    }
+    .nav-direita img {
+        width: 12%;   
+    } 
+
+    .menu-usuario{
+        width: 64%;
+    }
+
+
+   
+    
 }
 
-.progress-bar .step .numero {
-    position: relative;
-    height: 25px;
-    width: 25px;
-    margin: 0 auto;
-    border: 2px solid rgba(0,0,0,0.3);
-    color: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    display: inline-block;
-    float: left;    
-    transition: .2s;
+
+/*--------------------------------------------------*/
+/* Small tablets to big tablets: from 768px to 1023px; */
+/*-------------------------------------------------*/
+@media only screen and (max-width: 1023px) {
+    body,html {
+        height: 100%;
+        position: relative;
+        display: block;
+
+    }
+    .corpo {
+        height: 100%;
+    }
+
+
+    .corpo:before {
+        font-size: 600%; 
+    }
+    
+   .main-header{
+        display: none;
+        position: absolute;
+        height: 100%;
+        top: 0em;
+        width: 40%; 
+        animation: slideIn .3s ease;  
+        transition: margin-left .2s;
+        padding-top: 2em;
+    }
+    @keyframes slideIn {
+        0%{
+            margin-left: -2em
+        }
+        100% {
+            margin-left: 0;
+        }
+    }
+    .logo-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-div img{
+        width: 30%;
+    }
+    .mobile-nav {
+         display: block;
+        
+    }
+
+    .nav-esquerda {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-esquerda form {
+        float: none;
+        margin-left: -.8em;
+       
+    }
+    .nav-esquerda label{
+        display: none;
+    }
+
+     .nav-direita img {
+        width: 10%;   
+    } 
+
+    .hero-mensagem {
+        width: 600px;
+    }
+    
+    
+
+    
+   
 }
 
-.progress-bar .step .numero span {
-    font-weight: 300;
-    font-size: 80%;
-    line-height: 25px;
-    position: absolute;
-    top:-10%;
-    transform: translate(-50%);
-}
+/*--------------------------------------------------*/
+/* Small phones to small tablets: from 481 to 767px; */
+/*-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    html,body{
+        background: whitesmoke;
+    }
 
-.progress-bar .step .numero.active span{
-  display: none;
-}
+    
+    .corpo-header{
+        flex-direction: column-reverse;
+        width: 93%;
+        padding-bottom: 2em;
+        margin-top: -1em;
+        padding-top: 1em;
+    }
+    .nav-esquerda {
+        padding-top: 25px;
+        width: 100%;
+        justify-content: center;
+        
+    }
+    .mobile-nav {
+        position: absolute;
+        top:.5em;
+        left: 1.5em;
+        font-size: 200%;
+    }
+    .main-header {
+        width: 70%;
+    }
 
-.progress-bar .step .checka {
-    position: absolute;
-    left: 50%;
-    top: 74%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
 
-.progress-bar .step .checka.active {
-    display: block;
-    color: white;
-}
+    .nav-esquerda form input {
+        width: 420px;
+        margin-left: 0;
+    }
 
-.progress-bar .step p.active{
-  color: #0099ff;
-  transition: 0.2s linear;
+   
+    
+    .corpo{ 
+
+        margin-bottom: 5em;
+    }
+
+     .hero-mensagem {
+        width: 400px;
+    }
+
+
+.corpo:before {
+        font-size: 350%;
+        top:8.5em;
+        transform: rotate(0deg);  
+    }
+    
+
 }
