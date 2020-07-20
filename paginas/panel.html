@@ -31,6 +31,8 @@
 <section class="corpo">
 	<header class="corpo-header">
 		<div class="nav-esquerda">
+			<!--Menú da versão mobile-->
+			<a class="mobile-nav js--mobile-nav"><i class="ion-navicon-round"></i></a>
 			<form>
 				<label>Pesquisar</label>
 				<input type="search" placeholder="pesquise clientes, automóveis, etc...">
@@ -51,8 +53,6 @@
 					<span>Terminar a Sessão</span>		
 				</div>
 			</div>				
-			<!--Menú da versão mobile-->
-			<a class="mobile-nav js--mobile-nav"><i class="ion-navicon-round"></i></a>
 		</div>
 	</header>
 	
@@ -273,14 +273,20 @@
 						</div>
 						<div class="campo btn">
 							<span class="prev-4 prev">Anterior</span>	
-						    <button class="btn-salvar">Salvar</button>
+						    <button onclick="return false;" class="btn-salvar">Salvar</button>
 						</div>	
 					</div> 				      
 			    </form>
 		    </div>
 		</div>
-	
+</div>
 </section>
+<div class="bg-modal">
+			<div class="modal-contexto">
+			<i class="ion-checkmark-round"></i>
+			<h4>Novo Cliente Criado com Sucesso</h4>
+			<p>Pode agora pesquisar pelo nome do Cliente</p>
+		</div>
 </body>
     <!--Bibiotecas javascrit[JQUERY]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -290,5 +296,5 @@
     <script src="resources/vendors/js/jquery.waypoints.min.js"></script>
 
      <!--o ficheiro que contém o código javascript-->
-    <script src="../js/script.js"></script>
+    <script src="../js/script-panel.js"></script>
 </html>
