@@ -1,0 +1,1038 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.main-header{
+    width: 20%;
+    height: 100vh;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background: #0d2249;
+    color: white;
+    z-index: 2;
+}
+
+/* ----------------------------------------------- */
+/* COMPONENTES ÚTEIS */
+/* ----------------------------------------------- */
+
+
+.row {
+    width: 100%;
+    margin: aut;
+    border: 0px solid red;
+}
+
+.center {
+    margin-top: 10em;
+    position: relative;
+}
+section {
+    padding: 0px 2em;
+    width: 100%;
+}
+button {
+    cursor: pointer;
+}
+
+/*------------------- Main navi--------------- */
+
+
+.navegacao-principal {
+    padding-bottom: 1em;
+    border-bottom: 0px solid lightgrey;
+}
+
+.logo-div {
+    width: 100%;
+    float: left;
+    border: 0px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.logo-div img {
+    width: 40%;
+}
+.corpo-header input {
+    float: left;
+    border-radius: 5px;
+    width: 300px;
+    padding: .5em;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.4);
+    padding-right: 3.5em;
+    margin-left: 1em;
+}
+nav {
+    color: black;
+    width: 100%;
+    padding-top: .6em;
+
+}
+.nav-esquerda {
+    width: 60%;
+}
+.nav-esquerda form{
+    border:0px solid;
+    display: flex;  
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+.nav-esquerda label{
+    font-size: 80%;
+    font-weight: bold;
+}
+.nav-esquerda i{
+    margin-left: -1.5em;
+}
+.nav-direita {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+    right: 0;
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+.main-nav {
+    list-style: none;
+    float: right;
+    display: inline;
+    padding-top: .2em;
+    border: 0px solid black;
+    color: white;
+    display: flex;
+} 
+
+.main-nav li {
+    font-size: 80%;
+    display: inline-block;
+    margin-left: 32px;
+    font-weight: bold;
+}
+
+.nav-direita img {
+    width: 6%;
+    margin-right: 1em;
+    transition: .2s;
+} 
+
+.nav-direita img:hover {
+    transform: scale(1.1);
+} 
+
+.nav-direita span{
+    font-size: 80%;
+}
+.nav-direita .menu-usuario-icon {
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+.menu-usuario{
+    background: white;
+    box-shadow: 3px 3px 4px 0 rgba(0,0,0,.1);
+    display: none;
+    position: absolute;
+    top: 3em;
+    width: 40%;
+    padding: .5em;
+    z-index: 1;
+}
+.menu-usuario div {
+    display: flex;
+    padding-top: .5em;
+}
+.menu-usuario div i{
+    margin-right:  .5em;
+    opacity: .7;
+}
+.menu-usuario .usuario-info-menu{
+    height: 70px;
+    border-bottom:  1px solid rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+}
+
+.menu-usuario .usuario-info-menu span{
+    font-size: 70%;
+}
+
+
+ .navegacao-secundaria {
+    width: 100%;
+    /*background:  #063d62;*/
+    color: black; 
+    border-top: 1px solid rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    margin-top: .5em;
+ }
+
+ .navegacao-secundaria ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-bottom: 0em;
+    padding-top: .5em;
+    border-bottom: 0px solid lightgrey;
+ }
+
+ .navegacao-secundaria li{
+    padding: 0;
+    margin-bottom: 2em;
+    font-size: 80%;
+    transition: .1s ease;
+ }
+
+ .navegacao-secundaria li:hover,
+ .navegacao-secundaria li.activo{
+    padding: 0;
+    margin-bottom: 2em;
+    font-size: 80%;
+    background: #071124;
+    padding: .5em;
+ }
+ .navegacao-secundaria li i{
+   margin-right: .5em;
+   font-size: 110%;
+ }
+  .navegacao-secundaria a:link,
+  .navegacao-secundaria a:visited{
+    text-decoration: none;
+    color: white;
+    transition: .1s color;
+ }
+
+ .navegacao-secundaria a:hover,
+  .navegacao-secundaria a:active{
+    text-decoration: none;
+    color:  #0099ff;
+ }
+
+
+/*----------------MOBILE NAV-------------*/
+
+.mobile-nav{
+    display: none;
+    font-size: 160%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/*---------------CORPO--------------*/
+.corpo {
+    /*background-image: -webkit-linear-gradient(bottom, rgba(240,249,255,0.4), rgba(6,61,98,.5)),url('../imagens/3327590.jpg');
+    background-image: -o-linear-gradient(bottom, rgba(240,249,255,0.4), rgba(6,61,98,.5)),url('../imagens/3327590.jpg');*/
+    background: whitesmoke/*-image: linear-gradient(to left, rgba(212,221,232,.6), rgba(212,221,232,1)), url('../imagens/3327590.jpg')*/;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.corpo-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    top: 1em;
+
+}
+
+ /*------------------form----------------*/
+
+ .form-container {
+    margin-top: 2.1em;
+    background: white;
+    padding: 1.5em 1em 1em 1em;
+    width: 886.8px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 
+          4px 4px 3px 0 rgba(0,0,0,0.1),
+          -1px -1px 3px 0 rgba(0,0,0,0.1);
+    height: 80%; 
+}
+
+.grid::-webkit-scrollbar {
+    width: 8px;
+    margin-left: 1em;
+}
+.grid::-webkit-scrollbar-thumb {
+    height: 20px;
+    border-radius: 10px;
+    background: #0099ff;
+    box-shadow: inset 0 0px rgba(0,0,0,0.3);
+}
+.grid::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: lightgrey;
+    box-shadow: inset 0 0px rgba(0,0,0,0.3);
+}
+
+.form-container .header{
+    font-size: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-outer form {  
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .pagina{
+    width: 25%;
+    transition: margin-left .3s ease-in-out;  
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 100%;
+    height: 35%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 1em;
+}
+
+.form-outer form .pagina .titulo{
+    text-align: left;
+    font-size: 90%;
+}
+
+.form-outer form .pagina .campo {
+    margin: 10px 110px 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-outer form .pagina .subcampo-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-outer form .pagina .subcampo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-outer form .pagina .subcampo:last-child {
+    margin-left: 1em;
+}
+
+.form-outer form .pagina .campo .subcampo input {
+    width: 172px;
+
+}
+
+.form-outer form .pagina .campo label {
+    float: left;
+    font-size: 70%;
+    text-align: left;
+    margin-top: 1em;
+    font-weight: 600;
+    margin-bottom:  1em;
+}
+
+.form-outer form .pagina .campo input {
+    padding: .5em;
+    width: 366px;
+    border-radius:5px;
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+.form-outer form .pagina .campo input[name=codigo_cliente] {
+    width: 150px;
+}
+
+.form-outer form .pagina .campo textarea {
+    border: 1px solid lightgrey;
+    padding: 1em;
+    width: 704px;
+    height: 223px;
+    font-family: 'lato', 'Arial', sans-serif;
+    border-radius: 5px;
+    font-size: 80%;
+}
+
+.form-outer form .pagina .campo .opcional {
+    opacity: .7;
+    font-size: 90%;
+    font-weight: 10;
+}
+.form-outer form .pagina .campo button,
+.form-outer form .pagina .campo .nxtBtn,
+.form-outer form .pagina .campo .next,
+.form-outer form .pagina .campo .prev
+ {
+    text-transform: uppercase;
+    margin:10px auto 0px auto;
+    padding: .8em;
+    width: 115%;
+    display: block;
+    font-size: 80%;
+    background: #0099ff;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .5s ease;
+    text-decoration: none;
+
+
+}
+
+.form-outer form .pagina .campo button:hover,
+.form-outer form .pagina .campo .nxtBtn:hover,
+.form-outer form .pagina .campo .next:hover,
+.form-outer form .pagina .campo .prev:hover
+ {
+    background: #0099dd;
+}
+
+.form-outer form .pagina .btn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: .7em;
+
+}
+
+
+
+.form-outer form .pagina .campo .prev {
+    margin-right: 3px;
+    background: transparent;
+    border: 2px solid #0d2249;
+    color: #0d2249; 
+}
+
+.form-outer form .pagina .campo .prev:hover {
+    background: #0d2249;
+    color: white;
+}
+
+.form-outer form .pagina .campo .next,
+.form-outer form .pagina .campo .registrar {
+    margin-left: 3px;
+} 
+
+.form-container form  .tipo-seguro,
+.form-container form  .grau-incapacidade{
+    grid-column: 1/3;
+}
+
+
+.form-container form  .campo #tipo-seguro-modalidade,
+.form-container form  .campo #grau-incapacidade-modalidade {
+    /*margin-bottom:7.2em;*/
+    width: 119%;
+}
+
+/*-----------------progressive bar---------------*/
+    
+.progress-bar {
+    width: 90%;
+    display: flex;
+    margin: 30px auto;
+}
+
+.progress-bar .step {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.progress-bar .step p {
+    opacity: .7;
+    font-size:70%;
+    margin-bottom: .5em;
+}
+
+.progress-bar .step .numero:before,
+.progress-bar .step .numero:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 401%;
+    bottom: 11px;
+    left: 34px;
+    background:  black;
+    opacity: .1;
+}
+
+
+.progress-bar .step:last-child .numero:before,
+.progress-bar .step:last-child .numero:after {
+    display: none;
+}
+ 
+ .progress-bar .step .numero.active{
+    opacity: 1;
+    border-color: #0099ff;
+    background: #0099ff;
+    color: white;
+ }
+.progress-bar .step .numero.active:after {
+    opacity: 1;
+    background:#0099ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animacao 0.3s linear forwards;
+}
+
+
+.progress-bar .step .numero {
+    border-color: red;
+
+}
+
+@keyframes animacao{
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step .numero {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    margin: 0 auto;
+    border: 2px solid rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    display: inline-block;
+    float: left;    
+    transition: .2s;
+}
+
+.progress-bar .step .numero span {
+    font-weight: 300;
+    font-size: 80%;
+    line-height: 25px;
+    position: absolute;
+    top:-10%;
+    transform: translate(-50%);
+}
+
+.progress-bar .step .numero.active span{
+  display: none;
+}
+
+.progress-bar .step .checka {
+    position: absolute;
+    left: 50%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .checka.active {
+    display: block;
+    color: white;
+}
+
+.progress-bar .step p.active{
+  color: #0099ff;
+  transition: 0.2s linear;
+}
+
+/*---------------POP UP MODAL----------------*/
+
+ .bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ }
+
+ .bg-modal .modal-contexto {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    opacity: 1;
+    border-radius: 5px;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 1px 10px rgba(0,0,0,0.1);
+    animation: bigger .3s ease-in-out;
+ }
+
+@keyframes bigger{
+    0%{
+       transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+ .bg-modal .modal-contexto i {
+    font-size: 230%;
+    border-radius: 100%;
+    padding: .2em .4em;
+    color: white;
+    background: #0099ff;
+    margin-bottom: .5em;
+    transition: all .2s;
+    animation: colorfull .8s ease;
+ }
+@keyframes colorfull {
+    0%{
+        margin-top: -20px;
+        transform: rotateY(920deg);
+    }
+
+    100% {
+        background: #0099ff;
+    }
+}
+
+ .bg-modal .modal-contexto h4 {
+    margin-bottom: .5em;
+    text-transform: uppercase;
+ }
+ .bg-modal .modal-contexto p {
+    opacity: .7;
+    font-size: 80%;
+ }
+
+/*--------------------------------------------------*/
+/* Big tablets to 1200px (widths smaller that the 1140px row)*/
+/*-------------------------------------------------*/
+@media only screen and (max-width: 1200px) {
+    html,body {
+        font-size: 19px;
+    
+    }
+    .main-header{
+        width: 26%;
+        display: block;
+    }
+
+    .nav-direita img {
+        width: 12%;   
+    } 
+
+    .menu-usuario{
+        width: 64%;
+    }
+
+
+     .form-container {
+        width: 684.8px;
+        margin-top: 3em;
+        height: 82%; 
+    }
+
+    .grids {
+         height: 30%;
+    }
+   
+    .form-container .header{
+        font-size: 95%; 
+        text-align: center;
+    }
+
+    .progress-bar .step p {
+        height: 32px
+   
+    }
+
+    .progress-bar .step .checka {
+        top: 80%;     
+    }
+    
+    .progress-bar .step .numero:before,
+    .progress-bar .step .numero:after {
+        width: 361%;
+        left: 30px;
+    }
+
+    .form-outer form .pagina .campo input {
+        width: 268px;   
+    }
+    .form-outer form .pagina .campo .subcampo input {
+        width: 123px;
+
+    }
+
+    .form-outer form .pagina .campo button,
+    .form-outer form .pagina .campo .nxtBtn,
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .prev
+    {
+        width: 120.5%;    
+    }
+
+
+    .form-outer form .pagina .campo .prev {
+        margin-right: 6px; 
+    }
+
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .registrar {
+        margin-left: 6px;
+    } 
+
+
+    .form-container form  .campo #tipo-seguro-modalidade,
+    .form-container form  .campo #grau-incapacidade-modalidade {
+        /*margin-bottom:7.2em;*/
+        width: 125.5%;
+    }
+    
+}
+
+
+/*--------------------------------------------------*/
+/* Small tablets to big tablets: from 768px to 1023px; */
+/*-------------------------------------------------*/
+@media only screen and (max-width: 1023px) {
+    body,html {
+        height: 100%;
+        position: relative;
+        display: block;
+        position: relative;
+    }
+    .corpo {
+        height: 100%;
+    }
+    
+    .main-header{
+        display: none;
+        position: absolute;
+        height: 149%;
+        top: 0em;
+        width: 40%; 
+        animation: slideIn .3s ease;  
+        transition: margin-left .2s;
+        padding-top: 2em;
+    }
+    @keyframes slideIn {
+        0%{
+            margin-left: -2em
+        }
+        100% {
+            margin-left: 0;
+        }
+    }
+    .logo-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-div img{
+        width: 30%;
+    }
+    .mobile-nav {
+         display: block;
+        
+    }
+
+    .nav-esquerda {
+        width: 100%;
+        display: flex;
+        align-items: center;
+            justify-content: center;
+    }
+    .nav-esquerda form {
+        float: none;
+        margin-left: -.8em;
+       
+    }
+    .nav-esquerda label{
+        display: none;
+    }
+
+     .nav-direita img {
+        width: 10%;   
+    } 
+    
+    
+
+     .form-container {
+        width: 644.8px;
+         height: 86%; 
+    }
+
+    .form-container .header{
+        font-size: 90%; 
+        text-align: center;
+    }
+
+    .grid {
+         height: 37%;
+    }
+
+    .progress-bar {
+        width: 100%;  
+    }
+    
+    .progress-bar .step .numero:before,
+    .progress-bar .step .numero:after {
+        width: 420%;
+        left: 28px;
+   
+    }
+    .form-outer form .pagina .campo input {
+        width: 245px;
+       
+    }
+
+    .form-outer form .pagina .campo .subcampo input {
+        width: 111.7px;
+
+    }
+
+    .form-outer form .pagina .campo label {
+        height:30px;
+    }
+ 
+    .form-outer form .pagina .perguntas .campo  #sao-compridas-empresa,
+    .form-outer form .pagina .perguntas .campo  #faz-uso-empresa,
+    .form-outer form .pagina .perguntas .campo  #actividade-empresa,
+    .form-outer form .pagina .perguntas .campo  #executa-trabalhos-empresa {
+       margin-top: 1em;
+    }
+    .form-outer form .pagina .campo button,
+    .form-outer form .pagina .campo .nxtBtn,
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .prev
+    {
+        width: 121.5%;  
+        font-size: 80%; 
+    }
+
+
+    .form-outer form .pagina .campo .prev {
+        margin-right: 6px; 
+        padding: .8em;
+    }
+
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .registrar {
+        margin-left: 6px;
+        padding: .8em;
+    } 
+
+    .form-container form  .campo #tipo-seguro-modalidade,
+    .form-container form  .campo #grau-incapacidade-modalidade {
+        /*margin-bottom:7.2em;*/
+        width: 127.9%;
+    }
+
+    
+    .bg-modal .modal-contexto {
+        width: 420px;
+        height: 250px;
+    }
+    
+   
+}
+
+/*--------------------------------------------------*/
+/* Small phones to small tablets: from 481 to 767px; */
+/*-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    body{
+        background: whitesmoke;
+        overflow-y: scroll;
+    }
+
+    
+    .corpo-header{
+        flex-direction: column-reverse;
+        width: 93%;
+        padding-bottom: 2em;
+        margin-top: -1em;
+        padding-top: 1em;
+    }
+    .nav-esquerda {
+        padding-top: 25px;
+        width: 100%;
+        justify-content: center;
+        
+    }
+    .mobile-nav {
+        position: absolute;
+        top:.5em;
+        left: 1.5em;
+        font-size: 200%;
+    }
+    .main-header {
+        width: 70%;
+    }
+
+
+    .nav-esquerda form input {
+        width: 420px;
+        margin-left: 0;
+    }
+
+    .form-container{ 
+        margin-top: 18em; 
+        width: 410.8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3em;
+        height: 95%; 
+    }
+ 
+    
+    .corpo{ 
+
+        margin-bottom: 5em;
+    }
+    .form-container .header{
+        font-size: 90%; 
+    }
+    
+    .progress-bar .step p {
+        height: 32px
+   
+    }
+
+    .grid {
+         height: 25%;
+    }
+
+    .progress-bar .step .numero:before,
+    .progress-bar .step .numero:after {
+        width: 200%;
+        left: 28px;
+   
+    }
+
+
+    .progress-bar .step .checka {
+        top: 80%;     
+    }
+    
+    .form-outer form .pagina .campo input {
+        width: 372px; 
+    }
+
+    .subcampo-container {
+        width: 106.6%;
+    }
+    .form-outer form .pagina .campo .subcampo input {
+        width: 100%;
+    }
+
+    .form-outer form .pagina .campo button,
+    .form-outer form .pagina .campo .nxtBtn,
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .prev
+    {
+        width: 141.5%;    
+    }
+
+
+    .form-outer form .pagina .campo .prev {
+        margin-right: 6px; 
+    }
+
+    .form-outer form .pagina .campo .next,
+    .form-outer form .pagina .campo .registrar {
+        margin-left: 6px;
+    } 
+
+
+    .form-outer form .pagina .campo textarea {  
+        margin-left: .1em;
+        width: 371px;       
+    }
+
+    .grid {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .form-container form .pagina .campo #nome_cliente, 
+    .form-container form .pagina .campo #banco_cliente,
+    .form-container form .pagina .campo #endereco
+    {
+        width: 372px;
+
+    }
+
+    .form-container form  .campo #tipo-seguro-modalidade,
+    .form-container form  .campo #grau-incapacidade-modalidade {
+        /*margin-bottom:7.2em;*/
+        width: 155.8%;
+    }
+
+    .bg-modal {
+        height: 144%;
+    }
+    .bg-modal .modal-contexto {
+        width: 380px;
+        height: 240px; 
+        font-size: 90%;
+    }
+
+}
