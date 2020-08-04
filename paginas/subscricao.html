@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Subscrição</title>
+	<meta charset="UTF-8">
+	<meta lang="pt-br">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<!--Ficheiro responsável elos icons-->
+	<link rel="stylesheet" type="text/css" href="../resources/vendors/css/ionicons.min.css">
+	<link rel="stylesheet" href="../css/subscricao.css">
+</head>
+<body>
+	<header class="main-header">
+		<nav class="navegacao-principal">	
+			<div class="logo-div">
+				<img src="../imagens/logo.png" alt="logotipo">				
+			</div>		
+		</nav>
+		<nav class="navegacao-secundaria">			
+				<ul>
+					<a href="home.html"><li><i class="ion-home"></i>Home</li></a>
+					<a href="panel.html"><li><i class="ion-android-person-add"></i>Cliente</li></a>
+					<a href="subscricao.html"><li class="activo"><i class="ion-model-s"></i>Subscrição</li></a>
+					<a href="#"><li><i class="ion-android-warning"></i>Sinistro</li></a>
+					<a href="#"><li><i class="ion-ios-bookmarks"></i>Reseguro</li></a>
+					<a href="#"><li><i class="ion-clipboard"></i>Relatório</li></a>
+					<a href="#"><li><i class="ion-levels"></i>Parametrização</li></a>
+				</ul>
+  		</nav>
+	</header>
+<section class="corpo">
+	<header class="corpo-header">
+		<div class="nav-esquerda">
+			<!--Menú da versão mobile-->
+			<a class="mobile-nav js--mobile-nav"><i class="ion-navicon-round"></i></a>
+			<form>
+				<label>Pesquisar</label>
+				<input type="search" placeholder="pesquise clientes, automóveis, etc...">
+				<i class="ion-ios-search-strong"></i>
+			</form>
+		</div>
+		<div class="nav-direita">
+			<img src="../imagens/usuario.png">
+			<span class="nome_do_usuario">Carlos Josemar</span>	
+			<i class="ion-arrow-down-b menu-usuario-icon js--menu-usuario-icon"></i>
+			<div class="menu-usuario">
+				<div class="usuario-info-menu">
+				    <i class="ion-android-person"></i>
+				    <span>carlosJosemar77h@gmail.com</span>		
+				</div>
+				<div class="logout">
+					<i class="ion-android-exit"></i>
+					<span>Terminar a Sessão</span>		
+				</div>
+			</div>				
+		</div>
+	</header>
+	<div class="form-container">
+			<div class="header">
+				<h3>Novos seguros Acidentes de trabalho</h3>
+			</div>
+			<div class="progress-bar">
+				<div class="step">
+					<p>Apólice</p>
+					<div class="numero">
+						<span>1</span>
+					</div>
+					<div class="checka ion-checkmark-round"></div>
+				</div>
+
+				<div class="step">
+					<p>Tomador de Seguros</p>
+					<div class="numero">
+						<span>2</span>
+					</div>
+					<div class="checka ion-checkmark-round"></div>
+				</div>
+
+				<div class="step">
+					<p>Empresa</p>
+					<div class="numero">
+						<span>3</span>
+					</div>
+					<div class="checka ion-checkmark-round"></div>
+				</div>
+
+				<div class="step">
+					<p>Modalidade Seguro</p>
+					<div class="numero">
+						<span>4</span>
+					</div>
+					<div class="checka ion-checkmark-round"></div>
+				</div>
+
+				<div class="step">
+					<p>Trabalhadores</p>
+					<div class="numero">
+						<span>5</span>
+					</div>
+					<div class="checka ion-checkmark-round"></div>
+				</div>
+			</div>
+			<div class="form-outer">
+			    <form class="regista-cliente-form" action="#" method="POST">
+				    <div class="pagina slidepaginas">	
+						<div class="titulo"><h3>Apólice:</h3></div>
+						<div class="grid">
+						    <div class="campo">
+								<label>Número de Apólice</label>
+								<input name="numero-de-apolice" id="numero-de-apolice" type="number" value="1"/>
+						    </div>
+							<div class="campo">
+								<div class="label">
+								<label>Agência</label>
+							    </div>
+							    <input type="text" name="agencia-apolice" id="agencia-apolice" list="agencia-apolice-lista">
+							    <datalist id="agencia-apolice-lista">
+						            <option value="Sede">
+						            <option value="Outro">
+					        	</datalist>
+							</div>
+							
+							<div class="campo">
+								<label>Gestor</label>
+							    <input type="text" name="gestor-apolice" id="gestor-apolice" list="gestor-apolice-lista" placeholder="ex: Anilba Rogério">
+							    <datalist id="gestor-apolice-lista">
+						            <option value="Anilba Rogério">
+					        	</datalist>
+							</div>
+
+					        <div class="campo">
+								<label>Mediador/agente</label>
+								<input type="text" name="mediador-agente-apolice" id="mediador-agente-apolice" placeholder="Nome do Agente ou Selecione e Opção N/A" list="mediador-agente-apolice-lista">
+								<datalist id="mediador-agente-apolice-lista">
+						            <option value="Anilba Rogério">
+						            <option value="N/A">
+					        	</datalist>
+							</div>						
+
+							<div class="campo">
+								<label>Forma de Pagamento</label>
+								<input name="formas-de-pagamento-apolice" id="formas-de-pagamento-apolice" type="text" placeholder="Cashe, Multicaixa ou outro" list="formas-de-pagamento-apolice-lista"/>
+					            <datalist id="formas-de-pagamento-apolice-lista">
+					                <option value="Cashe">
+					                <option value="Multicaixa">
+					                <option value="Transferência Bancâria">
+					            </datalist>
+							</div>	
+
+							<div class="campo subcampo-container">
+								<div class="subcampo">
+									<label>Data de Início</label>
+									<input name="data-de-inicio-apolice" id="data-de-inicio-apolice" type="date">
+					       		</div>
+                                <div class="subcampo">
+                                	<label>Data de Fim</label>
+						            <input name="data-de-fim-aplice" id="data-de-fim-aploice" type="date">
+					        	</div>
+							</div>
+
+						</div>
+						<div class="campo">
+							<span class="nxtBtn">Avançar</span>
+						</div>	
+					</div>	
+					<div class="pagina">
+						<div class="titulo"><h3>Tomador de Seguros:</h3></div>
+						<div class="grid">
+					        <div class="campo">
+								<label>Nome</label>
+								<input type="text" name="nome_tomador" id="nome_tomador" placeholder="Nome do Tomador">
+							</div>
+
+
+							<div class="campo">
+								<label>Email</label>
+								<input type="text" name="email-tomador" id="email-tomador" placeholder="email">
+							</div>
+							
+							<div class="campo subcampo-container">
+								<div class="subcampo">
+									<label>Províncica <span class="opcional">(Opcional)<span></label>
+									<input name="provincia-tomador" id="provincia-tomador" type="text" placeholder="Huambo" list="provincia-tomador-lista">
+									<datalist id="provincia-tomador-lista">
+										<option value="Luanda">
+										<option value="Huambo">
+									</datalist>
+					       		</div>
+                                <div class="subcampo">
+                                	<label>Telefone</label>
+						            <input name="telefone-tomador" id="telefone-tomador" type="number" placeholder="ex: +244 922 XXX XXX">
+					        	</div>
+							</div>
+							
+							<div class="campo subcampo-container">
+								<div class="subcampo">
+									<label>Conta Própria <span class="opcional">(Opcional)<span></label>
+									<input type="text" name="conta-propria-tomador" id="conta-propria-tomador" placeholder="escolha entre sim ou não" list="conta-propria-tomador-lista">
+									<datalist id="conta-propria-tomador-lista">
+										<option value="Sim">
+										<option value="Não">
+									</datalist>
+					       		</div>
+                                <div class="subcampo">
+                                	<label>Morada <span class="opcional">(Opcional)<span></label>
+									<input type="text" name="morada-tomador" id="morada-tomador" placeholder="">
+					        	</div>
+							</div>
+							
+							<div class="campo">
+								<label>BI ou Passaporte</label>
+						        <input name="bi_passaporte-tomador" id="bi_passaporte-tomador" type="text" placeholder="bilhete de identicação ou Passaporte">
+							</div>
+
+							<div class="campo">
+								<label>Local de Cobrança </label>
+						        <input name="local-cobranca-tomador" id="local-cobranca-tomador" type="text">
+							</div>
+						</div>
+						<div class="campo btn">
+							<span class="prev-1 prev">Anterior</span>
+							<span class="next-1 next">Próximo</span>
+						</div>
+					</div>	
+	               
+
+	                <div class="pagina">	
+						<div class="titulo"><h3>Empresa:</h3></div>
+						<div class="grid perguntas">
+						    <div class="campo">
+								<label>A empresa está legalmente constituída?</label>
+								<input name="empresa-constituida-empresa" id="empresa-constituida-empresa" type="text" list="empresa-constituida-empresa-lista"/>
+					            <datalist id="empresa-constituida-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+
+							<div class="campo">
+								<label>Estão abrangidos todos os empregados</label>
+								<input name="empregados-abrangidos-empresa" id="empregados-abrangidos-empresa" type="text" list="empregados-abrangidos-empresa-lista"/>
+					            <datalist id="empregados-abrangidos-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+
+							 <div class="campo">
+								<label>São compridas todas as normais e regulamento de segurança e higiene ao trabalho em vigor a actividade?</label>
+								<input name="sao-compridas-empresa" id="sao-compridas-empresa" type="text" list="sao-compridas-empresa-lista"/>
+					            <datalist id="sao-compridas-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+
+							<div class="campo">
+								<label>Faz uso de matérias explosivas, corrosivas, inflamáveis, tóxicas ou outras matérias perigosas incluindo soldadura</label>
+								<input name="faz-uso-empresa" id="faz-uso-empresa" type="text" list="faz-uso-empresa-lista"/>
+					            <datalist id="faz-uso-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+								<label>A actividade da empresa é desenvolvida no domicílio de uma das pessoas seguras?</label>
+								<input name="actividade-empresa" id="actividade-empresa" type="text" list="actividade-empresa-lista"/>
+					            <datalist id="actividade-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+								<label>Executa trabalhos ainda que esporadicamente, a mais de 5 metros de altura e 2 metros de profundidade</label>
+								<input name="executa-trabalhos-empresa" id="executa-trabalhos-empresa" type="text" list="executa-trabalhos-empresa-lista"/>
+					            <datalist id="executa-trabalhos-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+								<label>Qual é o meio de transporte utilizado como maior frequência e vice e versa?</label>
+								<input name="qual-meio-de-transporte-empresa" id="qual-meio-de-transporte-empresa" type="text" list="qual-meio-de-transporte-empresa-lista"/>
+					            <datalist id="qual-meio-de-transporte-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+								<label>tipo de Actividade</label>
+								<input name="tipo-actividade-empresa" id="tipo-actividade-empresa" type="text" list="tipo-actividade-empresa-lista"/>
+					            <datalist id="tipo-actividade-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+								<label>Sub Actividade</label>
+								<input name="sub-actividade-empresa" id="sub-actividade-empesa" type="text" list="sub-actividade-empresa-lista"/>
+					            <datalist id="sub-actividade-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+
+							<div class="campo">
+								<label>Local ou locais aonde executam os trabalhos</label>
+								<input name="local-trabalho-empresa" id="local-trabalho-empresa" type="text" list="local-trabalho-empresa-lista"/>
+					            <datalist id="local-trabalho-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+
+							<div class="campo">
+								<label>Natureza dos trabalhos desenvolvidos</label>
+								<input name="natureza-trabalho-empresa" id="natureza-trabalho-empresa-empesa" type="text" list="natureza-trabalho-empresa-lista"/>
+					            <datalist id="natureza-trabalho-empresa-lista">
+					                <option value="Sim">
+					                <option value="Não">
+					            </datalist>
+							</div>
+							<div class="campo">
+									<label>Franquia em número de Dias</label>
+									<input name="franquia-empresa" id="franquia-empresa" type="text" list="franquia-empresa-lista"/>
+						            <datalist id="franquia-empresa-lista">
+						                <option value="Sim">
+						                <option value="Não">
+						            </datalist>
+					        </div>
+					        <div class="campo">
+									<label>Grau de incapacidade</label>
+									<input name="grau-incapacidade-empresa" id="grau-incapacidade-empresa" type="text" list="grau-incapacidade-empresa-lista"/>
+						            <datalist id="grau-incapacidade-empresa-lista">
+						                <option value="Sim">
+						                <option value="Não">
+						            </datalist>
+					        </div>
+							
+						</div>
+						<div class="campo btn">
+							<span class="prev-2 prev">Anterior</span>
+							<span class="next-2 next">Próximo</span>
+						</div>
+					</div>
+
+					<div class="pagina">	
+						<div class="titulo"><h3>Modalidade Seguro:</h3></div>
+						<div class="grid">
+						    <div class="campo tipo-seguro">
+								<label>Tipo de Seguro</label>
+								<input name="tipo-seguro-modalidade" id="tipo-seguro-modalidade" type="number" list="tipo-seguro-modalidade-lista"/>
+					            <datalist id="tipo-seguro-modalidade-lista">
+					                <option value="Fixo">
+					                <option value="Variável">
+					            </datalist>
+							</div>
+
+							<div class="campo grau-incapacidade">
+								<label>Grau de Incapacidade</label>
+								<input name="grau-incapacidade-modalidade" id="grau-incapacidade-modalidade" type="number" list="grau-incapacidade-modalidade-lista">
+								<datalist>
+									<option value="333">
+								</datalist>
+							</div>
+						</div>
+						<div class="campo btn">
+							<span class="prev-3 prev">Anterior</span>
+							<span class="next-3 next">Próximo</span>
+						</div>
+					</div>
+
+					<div class="pagina">	
+						<div class="titulo"><h3>Trabalhadores:</h3></div>
+						<div class="grid">
+							<div class="campo">
+								<label>Capital de Seguro</label>
+								<input name="capital-seguro-trabalhador" id="capital-seguro-trabalhador" type="number">
+							</div>
+
+							<div class="campo">
+								<label>Nome</label>
+								<input name="nome-trabalhador" id="nome-trabalhador" type="text">
+							</div>
+
+							<div class="campo">
+								<label>BI</label>
+								<input name="bi-trabalhador" id="bi-trabalhador" type="text">
+							</div>
+
+							<div class="campo">
+								<label>Gênero</label>
+								<input name="genero-trabalhador" id="genero-trabalhador" type="text">
+							</div>
+
+							<div class="campo subcampo-container">
+								<div class="subcampo">
+									<label>Data início</label>
+									<input name="data-inicio-trabalhador" id="data-inicio-trabalhador" type="date">
+								</div>
+								<div class="subcampo">
+									<label>Data Nascimento</label>
+									<input name="data-nasciento-trabalhador" id="data-nasciento-trabalhador" type="date">
+								</div>
+							</div>
+
+							<div class="campo subcampo-container">
+								<div class="subcampo">
+									<label>Idade</label>
+									<input name="idade-trabalhador" id="idade-trabalhador" type="date">
+								</div>
+								<div class="subcampo">
+									<label>Categoria</label>
+									<input name="categoria-trabalhador" id="categoria-trabalhador" type="date">
+								</div>
+							</div>
+
+							<div class="campo">
+								<label>Salário Mensal</label>
+								<input name="salario-mensal-trabalhador" id="salario-mensal-trabalhador" type="text">
+							</div>
+
+							<div class="campo">
+								<label>Outra remunação <span class="opcional">(Opcional)</span></label>
+								<input name="salario-mensal-trabalhador" id="salario-mensal-trabalhador" type="text">
+							</div>
+							
+						</div>
+						<div class="campo btn">
+							<span class="prev-4 prev">Anterior</span>	
+						    <button onclick="return false;" class="btn-salvar">Salvar</button>
+						</div>	
+					</div> 				      
+			    </form>
+		    </div>
+		</div>
+</div>
+</section>
+	<div class="bg-modal">
+		<div class="modal-contexto">
+			<i class="ion-checkmark-round"></i>
+			<h4>Novo Cliente Criado com Sucesso</h4>
+			<p>Pode agora pesquisar pelo nome do Cliente</p>
+		</div>
+	</div>
+</body>
+    <!--Bibiotecas javascrit[JQUERY]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="resources/vendors/js/jquery.waypoints.min.js"></script>
+
+    <!--o ficheiro que contém o código javascript-->
+    <script src="../js/script-subscricao.js"></script>
+    <script src="../js/script-comun.js"></script>
+</html>
