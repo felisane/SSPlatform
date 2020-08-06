@@ -216,7 +216,8 @@ nav {
     transition: .1s ease;
  }
 
- .navegacao-secundaria li:hover{
+ .navegacao-secundaria li:hover,
+ .navegacao-secundaria li.activo{
     padding: 0;
     margin-bottom: 2em;
     font-size: 80%;
@@ -424,9 +425,7 @@ nav {
     margin-left: 3px;
 } 
 
-.form-container form  .nome_cliente{
-    grid-column: 1/3;
-}
+
 
 .form-container form  .nome_cliente #nome_cliente{
     width: 100%;
@@ -451,7 +450,9 @@ nav {
     margin-bottom:7.2em;
     width: 100%;
 }
-
+.form-container form  .campo #Utilizador {
+    margin-bottom:7.2em;
+}
 /*-----------------progressive bar---------------*/
     
 .progress-bar {
@@ -631,6 +632,25 @@ nav {
     font-size: 80%;
  }
 
+ /*----------------MENSAGEM DE ERRO------------------*/
+.mensagem-erro{
+    border: 0px solid;
+    font-size: 65%;
+    text-align: left;
+    margin-top: .5em;
+    margin-bottom: -1.5em;
+}
+
+.mensagem-erro i{
+    margin-right: .3em;
+    font-size: 130%;
+}
+
+.mensagem-erro span{
+    color: red;
+}
+
+
 /*--------------------------------------------------*/
 /* Big tablets to 1200px (widths smaller that the 1140px row)*/
 /*-------------------------------------------------*/
@@ -767,6 +787,7 @@ nav {
 
      .form-container {
         width: 544.8px;
+        padding-bottom: 0;
     }
 
     .form-container .header{
@@ -812,8 +833,8 @@ nav {
 
     
     .bg-modal .modal-contexto {
-        width: 450px;
-        height: 280px;
+        width: 420px;
+        height: 250px;
     }
     
    
@@ -858,7 +879,7 @@ nav {
     }
 
     .form-container{ 
-        margin-top: 24em; 
+        margin-top: 27em; 
         width: 410.8px;
         display: flex;
         flex-direction: column;
@@ -942,6 +963,10 @@ nav {
         width: 380px;
         height: 240px; 
         font-size: 90%;
+    }
+    .mensagem-erro{
+    margin-top: 1em;
+    margin-bottom: 0em;
     }
 
 }
